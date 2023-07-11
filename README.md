@@ -1,6 +1,7 @@
 # The-gym-git-solution
-##Bundle 1
-#
+
+## Bundle 1
+# Exercise 1
 Lenovo@DESKTOP-6LCGN4B MINGW64 ~ (main)
 $ cd The-gym-git-solution/
 
@@ -63,7 +64,7 @@ Switched to branch 'dev'
 Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (dev)
 $ ls
 README.md  bundle-01
-#
+
 ##Exercise 2
 Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (dev)
 $ touch home.html
@@ -197,4 +198,4 @@ Dropped stash@{0} (63b9ec372000d842611d29560466a283d70c205b)
 Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (dev)
 $ git reset --hard HEAD
 HEAD is now at 9da64fe  added home and about pages
-#
+
