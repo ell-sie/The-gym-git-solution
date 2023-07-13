@@ -192,10 +192,55 @@ Your branch is up to date with 'origin/dev'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         new file:   team.html
+# Bundle 2
+## Exercise 1
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (dev)
+$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/bundle-2)
+$ vi services.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/bundle-2)
+$ git add .
+warning: LF will be replaced by CRLF in services.html.
+The file will have its original line endings in your working directory
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/bundle-2)
+$ git commit -m 'added service page'
+[ft/bundle-2 8e86127] added service page
+ 1 file changed, 20 insertions(+)
+ create mode 100644 services.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/bundle-2)
+$ git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/bundle-2)
+$  git push --set-upstream origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 592 bytes | 592.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/ell-sie/The-gym-git-solution/pull/new/ft/bundle-2
+remote:
+To https://github.com/ell-sie/The-gym-git-solution.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+
 
 Dropped stash@{0} (63b9ec372000d842611d29560466a283d70c205b)
 
-Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (dev)
+## Exercise 2
+
 $ git reset --hard HEAD
 HEAD is now at 9da64fe  added home and about pages
 
