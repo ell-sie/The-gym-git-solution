@@ -509,8 +509,8 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/ell-sie/Gym-Git-Exercise-Solutions.git
    4fb0b17..e7c9d6d  ft/services-redesign -> ft/services-redesign
 ```
-#Bundle 3
-##Exercise 1
+# Bundle 3
+## Exercise 1
 
 ```
 
