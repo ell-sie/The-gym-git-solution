@@ -510,8 +510,7 @@ To https://github.com/ell-sie/Gym-Git-Exercise-Solutions.git
    4fb0b17..e7c9d6d  ft/services-redesign -> ft/services-redesign
 ```
 #Bundle 3
-
-###Exercise 1
+##Exercise 1
 
 ```
 
