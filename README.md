@@ -509,4 +509,198 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/ell-sie/Gym-Git-Exercise-Solutions.git
    4fb0b17..e7c9d6d  ft/services-redesign -> ft/services-redesign
 ```
+#Bundle 3
 
+###Exercise 1
+
+```
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/service-redesign)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/team-page)
+$ vi team.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/team-page)
+$ git add .
+warning: LF will be replaced by CRLF in team.html.
+The file will have its original line endings in your working directory
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/team-page)
+$ git commit -m 'team'
+[ft/team-page b3021b3] team
+ 1 file changed, 32 insertions(+)
+ create mode 100644 team.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/team-page)
+$ git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/team-page)
+$ git push --set-upstream origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 568 bytes | 568.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/ell-sie/The-gym-git-solution/pull/new/ft/team-page
+remote:
+To https://github.com/ell-sie/The-gym-git-solution.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git pull
+Updating 419644b..8e0e480
+Fast-forward
+ services.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/team-page)
+$ git log
+commit b3021b383d693355ee710bb50a768004af67695f (HEAD -> ft/team-page, origin/ft/team-page)
+Author: ll-sie <e.ndiramiye@alustudent.com>
+Date:   Tue Jul 25 12:13:00 2023 +0200
+
+    team
+
+commit 8ca0f809eeafbd3081436d54f1a56ae1b29fb466 (origin/ft/service-redesign, ft/service-redesign)
+Merge: 8297f51 f284299
+Author: ll-sie <e.ndiramiye@alustudent.com>
+Date:   Tue Jul 25 12:09:24 2023 +0200
+
+    changes
+
+commit 8297f51fa28c9077ce2ac22fdec761aa625438bd
+Merge: 383b0c5 419644b
+Author: ll-sie <e.ndiramiye@alustudent.com>
+Date:   Tue Jul 25 11:29:49 2023 +0200
+
+    resolved
+
+commit f284299ee9078daca24e7eeb964822093ab821e7
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/team-page)
+$ ^C
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/contact-page)
+$ git cherry-pick b3021b383d693355ee710bb50a768004af67695f
+[ft/contact-page 9a9dd1c] team
+ Date: Tue Jul 25 12:13:00 2023 +0200
+ 1 file changed, 32 insertions(+)
+ create mode 100644 team.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/contact-page)
+$ git add .
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/contact-page)
+$ git commit -m 'contact'
+On branch ft/contact-page
+nothing to commit, working tree clean
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/contact-page)
+$ git push --set-upstream origin ft/contact-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 573 bytes | 573.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/ell-sie/The-gym-git-solution/pull/new/ft/contact-page
+remote:
+To https://github.com/ell-sie/The-gym-git-solution.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/faq-page)
+$ vi faq.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/faq-page)
+$ git add .
+warning: LF will be replaced by CRLF in faq.html.
+The file will have its original line endings in your working directory
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/faq-page)
+$ git commit -m 'faq'
+[ft/faq-page 4545155] faq
+ 1 file changed, 12 insertions(+)
+ create mode 100644 faq.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/faq-page)
+$ git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 470 bytes | 470.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/ell-sie/The-gym-git-solution/pull/new/ft/faq-page
+remote:
+To https://github.com/ell-sie/The-gym-git-solution.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/faq-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/team-page)
+$ git revert ^C
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/team-page)
+$ git revert b3021b383d693355ee710bb50a768004af67695f
+[ft/team-page 3b757f8] Revert "team"
+ 1 file changed, 32 deletions(-)
+ delete mode 100644 team.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/team-page)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 241 bytes | 241.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ell-sie/The-gym-git-solution.git
+   b3021b3..3b757f8  ft/team-page -> ft/team-page
+```
