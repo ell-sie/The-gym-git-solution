@@ -64,13 +64,8 @@ Switched to branch 'dev'
 Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (dev)
 $ ls
 README.md  bundle-01
-<<<<<<< HEAD
 ```
-=======
-<<<<<<< HEAD
-
->>>>>>> a7e88992fa42f7db8262e795297ac2681fe51c15
-##Exercise 2
+## Exercise 2
 ```
 Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (dev)
 $ touch home.html
