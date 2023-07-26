@@ -1,7 +1,6 @@
 # The-gym-git-solution
-
-# Bundle 1
-## Exercise 1
+## Bundle 1
+# Exercise 1
 ```
 Lenovo@DESKTOP-6LCGN4B MINGW64 ~ (main)
 $ cd The-gym-git-solution/
@@ -65,7 +64,12 @@ Switched to branch 'dev'
 Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (dev)
 $ ls
 README.md  bundle-01
+<<<<<<< HEAD
 ```
+=======
+<<<<<<< HEAD
+
+>>>>>>> a7e88992fa42f7db8262e795297ac2681fe51c15
 ##Exercise 2
 ```
 Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (dev)
@@ -784,3 +788,6 @@ To https://github.com/ell-sie/The-gym-git-solution.git
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 ```
 
+=======
+~
+>>>>>>> 41a3a72 (Update README.md)
