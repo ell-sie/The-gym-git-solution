@@ -703,3 +703,83 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/ell-sie/The-gym-git-solution.git
    b3021b3..3b757f8  ft/team-page -> ft/team-page
 ```
+## Exercise 2
+
+```
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ ls
+README.md  about.html  bundle-01  home.html  services.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ vi home.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git add .
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git commit -m 'hoem-page'
+[main 8d3e423] hoem-page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 314 bytes | 314.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/ell-sie/The-gym-git-solution.git
+   24f0691..8d3e423  main -> main
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/home-page-redesign)
+$ ls
+README.md  about.html  bundle-01  faq.html  home.html  services.html  team.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/home-page-redesign)
+$ vi home.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/home-page-redesign)
+$ git add .
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/home-page-redesign)
+$ git commit -m 'home again'
+[ft/home-page-redesign 1aab1d1] home again
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/home-page-redesign)
+$ git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.35 KiB | 693.00 KiB/s, done.
+Total 9 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/ell-sie/The-gym-git-solution/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/ell-sie/The-gym-git-solution.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+```
+
