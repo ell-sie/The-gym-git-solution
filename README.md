@@ -1,7 +1,7 @@
 # The-gym-git-solution
 
-## Bundle 1
-# Exercise 1
+# Bundle 1
+## Exercise 1
 ```
 Lenovo@DESKTOP-6LCGN4B MINGW64 ~ (main)
 $ cd The-gym-git-solution/
@@ -65,8 +65,9 @@ Switched to branch 'dev'
 Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (dev)
 $ ls
 README.md  bundle-01
-
+```
 ##Exercise 2
+```
 Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (dev)
 $ touch home.html
 
