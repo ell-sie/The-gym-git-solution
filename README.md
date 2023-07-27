@@ -785,7 +785,6 @@ branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 # Bundle-4
 ## Exercise 1
 ```
-
 Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
 $ git remote add git-copy https://github.com/ell-sie/git-basics.git
 
@@ -876,4 +875,101 @@ Total 74 (delta 37), reused 3 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (37/37), done.
 To https://github.com/ell-sie/git-basics.git
    a87361b..15eb98b  main -> main
+```
+# Bundle 4
+## Exercise 2
+```
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/footer)
+$ ls
+README.md  about.html  bundle-01  home.html  services.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/footer)
+$ vi about.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/footer)
+$ vi services.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/footer)
+$ git add .
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/footer)
+$ git commit -m 'footer intel'
+[ft/footer 7f09b45] footer intel
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/footer)
+$ git push --set-upstream ft/footer
+fatal: 'ft/footer' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/footer)
+$ git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/footer
+
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/footer)
+$ git push --set-upstream origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 437 bytes | 218.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/ell-sie/The-gym-git-solution/pull/new/ft/footer
+remote:
+To https://github.com/ell-sie/The-gym-git-solution.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/squashing)
+$ git merge --squash ft/footer
+Updating c62fabc..7f09b45
+Fast-forward
+Squash commit -- not updating HEAD
+ about.html    | 3 +++
+ services.html | 2 +-
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/squashing)
+$ git commit -m 'footer changes squashing'
+[ft/squashing 46db4f7] footer changes squashing
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/squashing)
+$ git push --set-upstream origin ft/squashing
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 447 bytes | 447.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/ell-sie/The-gym-git-solution/pull/new/ft/squashing
+remote:
+To https://github.com/ell-sie/The-gym-git-solution.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
 ```
