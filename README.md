@@ -973,3 +973,8 @@ To https://github.com/ell-sie/The-gym-git-solution.git
  * [new branch]      ft/squashing -> ft/squashing
 branch 'ft/squashing' set up to track 'origin/ft/squashing'.
 ```
+# Bundle 5
+## Exercise 1
+```
+https://ell-sie.github.io/The-gym-git-solution/
+```
