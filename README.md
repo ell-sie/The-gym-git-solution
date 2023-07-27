@@ -782,7 +782,98 @@ To https://github.com/ell-sie/The-gym-git-solution.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 ```
+# Bundle-4
+## Exercise 1
+```
 
-=======
-~
->>>>>>> 41a3a72 (Update README.md)
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git remote add git-copy https://github.com/ell-sie/git-basics.git
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ ls
+README.md  about.html  bundle-01  home.html  services.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ vi home.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git add .
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git commit -m 'changed home page'
+[main 4c5c0c0] changed home page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 311 bytes | 155.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/ell-sie/The-gym-git-solution.git
+   c69cb78..4c5c0c0  main -> main
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git push git-copy main
+To https://github.com/ell-sie/git-basics.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/ell-sie/git-basics.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ ^C
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git pull git-copy main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), 1.14 KiB | 72.00 KiB/s, done.
+From https://github.com/ell-sie/git-basics
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> git-copy/main
+fatal: refusing to merge unrelated histories
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ ^C
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git pull git-copy main --allow-unrelated-histories
+From https://github.com/ell-sie/git-basics
+ * branch            main       -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ ^C
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git push origin main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 1.40 KiB | 1.40 MiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ell-sie/The-gym-git-solution.git
+   4c5c0c0..15eb98b  main -> main
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git push git-copy main
+Enumerating objects: 75, done.
+Counting objects: 100% (75/75), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (71/71), done.
+Writing objects: 100% (74/74), 15.35 KiB | 1.71 MiB/s, done.
+Total 74 (delta 37), reused 3 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (37/37), done.
+To https://github.com/ell-sie/git-basics.git
+   a87361b..15eb98b  main -> main
+```
