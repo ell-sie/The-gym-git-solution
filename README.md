@@ -1,5 +1,4 @@
 # The-gym-git-solution
-
 ## Bundle 1
 # Exercise 1
 ```
@@ -65,8 +64,9 @@ Switched to branch 'dev'
 Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (dev)
 $ ls
 README.md  bundle-01
-
-##Exercise 2
+```
+## Exercise 2
+```
 Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (dev)
 $ touch home.html
 
@@ -702,4 +702,279 @@ Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/ell-sie/The-gym-git-solution.git
    b3021b3..3b757f8  ft/team-page -> ft/team-page
+```
+## Exercise 2
+
+```
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ ls
+README.md  about.html  bundle-01  home.html  services.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ vi home.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git add .
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git commit -m 'hoem-page'
+[main 8d3e423] hoem-page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 314 bytes | 314.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/ell-sie/The-gym-git-solution.git
+   24f0691..8d3e423  main -> main
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/home-page-redesign)
+$ ls
+README.md  about.html  bundle-01  faq.html  home.html  services.html  team.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/home-page-redesign)
+$ vi home.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/home-page-redesign)
+$ git add .
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/home-page-redesign)
+$ git commit -m 'home again'
+[ft/home-page-redesign 1aab1d1] home again
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/home-page-redesign)
+$ git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.35 KiB | 693.00 KiB/s, done.
+Total 9 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/ell-sie/The-gym-git-solution/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/ell-sie/The-gym-git-solution.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+```
+# Bundle-4
+## Exercise 1
+```
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git remote add git-copy https://github.com/ell-sie/git-basics.git
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ ls
+README.md  about.html  bundle-01  home.html  services.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ vi home.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git add .
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git commit -m 'changed home page'
+[main 4c5c0c0] changed home page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 311 bytes | 155.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/ell-sie/The-gym-git-solution.git
+   c69cb78..4c5c0c0  main -> main
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git push git-copy main
+To https://github.com/ell-sie/git-basics.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/ell-sie/git-basics.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ ^C
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git pull git-copy main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), 1.14 KiB | 72.00 KiB/s, done.
+From https://github.com/ell-sie/git-basics
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> git-copy/main
+fatal: refusing to merge unrelated histories
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ ^C
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git pull git-copy main --allow-unrelated-histories
+From https://github.com/ell-sie/git-basics
+ * branch            main       -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ ^C
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git push origin main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 1.40 KiB | 1.40 MiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ell-sie/The-gym-git-solution.git
+   4c5c0c0..15eb98b  main -> main
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git push git-copy main
+Enumerating objects: 75, done.
+Counting objects: 100% (75/75), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (71/71), done.
+Writing objects: 100% (74/74), 15.35 KiB | 1.71 MiB/s, done.
+Total 74 (delta 37), reused 3 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (37/37), done.
+To https://github.com/ell-sie/git-basics.git
+   a87361b..15eb98b  main -> main
+```
+# Bundle 4
+## Exercise 2
+```
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/footer)
+$ ls
+README.md  about.html  bundle-01  home.html  services.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/footer)
+$ vi about.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/footer)
+$ vi services.html
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/footer)
+$ git add .
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/footer)
+$ git commit -m 'footer intel'
+[ft/footer 7f09b45] footer intel
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/footer)
+$ git push --set-upstream ft/footer
+fatal: 'ft/footer' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/footer)
+$ git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/footer
+
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/footer)
+$ git push --set-upstream origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 437 bytes | 218.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/ell-sie/The-gym-git-solution/pull/new/ft/footer
+remote:
+To https://github.com/ell-sie/The-gym-git-solution.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/squashing)
+$ git merge --squash ft/footer
+Updating c62fabc..7f09b45
+Fast-forward
+Squash commit -- not updating HEAD
+ about.html    | 3 +++
+ services.html | 2 +-
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/squashing)
+$ git commit -m 'footer changes squashing'
+[ft/squashing 46db4f7] footer changes squashing
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+
+Lenovo@DESKTOP-6LCGN4B MINGW64 ~/The-gym-git-solution (ft/squashing)
+$ git push --set-upstream origin ft/squashing
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 447 bytes | 447.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/ell-sie/The-gym-git-solution/pull/new/ft/squashing
+remote:
+To https://github.com/ell-sie/The-gym-git-solution.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+```
+# Bundle 5
+## Exercise 1
+```
+https://ell-sie.github.io/The-gym-git-solution/
 ```
